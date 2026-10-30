@@ -1,0 +1,48 @@
+/* Réinitialisation simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* Mise en page globale avec CSS Grid
+   3 colonnes : gauche | centre | droite
+   3 lignes : banner | corps | footer */
+.layout {
+  display: grid;
+  
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "banner  banner  banner"
+    "sidebar content right"
+    "footer  footer  footer";
+  min-height: 100vh;
+}
+
+/* Association de chaque bloc à sa zone */
+
+/* Banner */
+
+/* Colonnes latérales */
+
+/* Contenu central */
+
+/* Footer */
+
+/* Adaptation mobile : tout passe en une seule colonne */
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "banner"
+      "sidebar"
+      "content"
+      "right"
+      "footer";
+  }
+}

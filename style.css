@@ -1,0 +1,125 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* centrage horizontal */
+  align-items: center;       /* centrage vertical */
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* ===== Carte du formulaire ===== */
+.formulaire {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  padding: 40px 36px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.formulaire h2 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 6px;
+  font-size: 1.7rem;
+}
+
+.formulaire .sous-titre {
+  text-align: center;
+  color: #718096;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+/* ===== Champs ===== */
+.champ {
+  margin-bottom: 20px;
+}
+
+.champ label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.champ input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: #2d3748;
+  background: #f7fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.champ input::placeholder {
+  color: #a0aec0;
+}
+
+.champ input:hover {
+  border-color: #cbd5e0;
+}
+
+.champ input:focus {
+  background: #ffffff;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+/* Nom et prénom côte à côte */
+.ligne {
+  display: flex;
+  gap: 16px;
+}
+
+.ligne .champ {
+  flex: 1;
+}
+
+/* ===== Bouton ===== */
+.formulaire button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.formulaire button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+}
+
+.formulaire button:active {
+  transform: translateY(0);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .formulaire {
+    padding: 30px 22px;
+  }
+
+  .ligne {
+    flex-direction: column;
+    gap: 0;
+  }
+}

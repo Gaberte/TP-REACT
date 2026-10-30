@@ -1,0 +1,19 @@
+.banner       { grid-area: banner; }
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #1f3a5f;
+  color: #fff;
+}
+
+.banner nav a {
+  color: #fff;
+  margin-left: 16px;
+  text-decoration: none;
+}
+
+.banner nav a:hover {
+  text-decoration: underline;
+}
